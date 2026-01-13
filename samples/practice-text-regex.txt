@@ -1,0 +1,75 @@
+# Sample strings for demonstration
+
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+0123456789
+aabbbcccccc
+
+librarian@library.org
+librarian@library-carpentry.net
+
+www.librarycarpentry.org
+www.library-carpentry.net 
+www2.librarycarpentry.com
+library--carpentry
+
+123-567-1839
++1 123-567-1839
+(202) 388-6389
+
+test01.txt
+test02.txt
+test03.txt, test04.txt
+text01.txt
+text02.txt
+text03.txt
+text04.pdf
+text05.docx
+text100.txt
+
+
+# Working backwards (group practice): what do these expressions match?
+^[Oo]rgani.e\b
+^[Oo]rgani.e\w*
+[Oo]rgani.e\w+$
+^[Oo]rgani.e\w?\b
+^[Oo]rgani.e\w?$
+\b[Oo]rgani.e\w{2}\b
+\b[Oo]rgani.e\b|\b[Oo]rgani.e\w{1}\b
+
+
+# Snippets for matching practice:
+Organize
+organize
+Organise
+organise
+organiSeR
+Organizers
+organised
+organised organized
+reorganise
+Reorganized
+ organisers
+ organikef2
+
+France
+french
+frence
+Franch 
+
+color
+colour
+
+headrest
+head rest
+head  rest
+
+seatbelt
+seat belt
+seat  belt
+
+British Library : London, 2015 
+Manchester University Press: Manchester, 1999
+
+Sample text for further exercise: https://github.com/LibraryCarpentry/lc-data-intro/tree/gh-pages/data/swcCoC.md
+Website for code-along exercises (copy and paste above text here): https://regex101.com/ 

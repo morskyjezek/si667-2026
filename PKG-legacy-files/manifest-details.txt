@@ -1,0 +1,10 @@
+total 26712
+-rw-r--r--  1 jajohnst  staff     18451 Jan 18  2024 01N-0256_emc-000171-01.wps
+-rwxr-xr-x  1 jajohnst  staff  12705156 Jan 18  2024 080-b2-tambarani.mp3
+-rw-r--r--  1 jajohnst  staff     70200 Jan 18  2024 1898111001_1.txt
+-rw-r--r--  1 jajohnst  staff    165699 Jan 18  2024 a0000003c.gdbtable.sdc
+-rw-r--r--  1 jajohnst  staff      1086 Jan 18  2024 ch00001.rtf
+-rw-r--r--  1 jajohnst  staff    665088 Jan 18  2024 fertilizeruse.xls
+-rw-r--r--@ 1 jajohnst  staff     29136 Jan 18  2024 inventory.docx
+-rw-r--r--@ 1 jajohnst  staff         0 Jan 13 15:05 manifest-details.txt
+-rw-r--r--  1 jajohnst  staff       173 Jan 13 15:04 manifest-files.txt
