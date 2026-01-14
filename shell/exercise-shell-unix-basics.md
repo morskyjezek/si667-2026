@@ -12,22 +12,22 @@ _Note: where you see “Mac” below, this generally designates a UNIX-wide comm
 
 ## General Structure for a Command
 
-Most shell commands follow a typical syntax structure, which can be summarized like this:
+Most shell commands follow a typical structure, or _syntax_, which can be summarized like this:
 
 `command` + `options` + `arguments`
 
 The **command** is the short bit of text that you use to invoke a program, such as `ls`,
-`mkdir`, or `find`. This is the most basic part of the command. 
+`mkdir`, or `find`. This is the most basic part of the command.
 Some commands can be run without any additional options or arguments.
 The **options** are additional flags that give the program more
 information about what you want it to do (e.g. `ls -a` or `mkdir -v`),
-or allow you provide additional information (e.g., `find -type f`). 
-Options are generally noted with a single hyphen followed by a letter 
+or allow you provide additional information (e.g., `find -type f`).
+Options are generally noted with a single hyphen followed by a letter
 (e.g., `-h`),
 or a double hyphen followed by a word (e.g., `--help`); in many cases,
-options are followed by additional information such as a number (e.g., `head -n 2`). 
-Finally, **arguments** provide the program with information and input, 
-often a file or file path. For example, `ls` can be supplied with a filepath of the 
+options are followed by additional information such as a number (e.g., `head -n 2`).
+Finally, **arguments** provide the program with information and input,
+often a file or file path. For example, `ls` can be supplied with a filepath of the
 location where you want list the files.
 
 There are many commands, a few of which are covered below. It can be confusing at first
@@ -35,9 +35,9 @@ to remember all of the different commands, but don't worry - you're not alone, a
 there are a lot of options to find out more information. One easy way to get more
 details within the shell is to use `man` (short for manual), which will bring up
 documentation for the command, which you have provided as an argument. For example,
-`man find` tells you all about the ways you can use `find`. There are also many helpful 
-resources, some of which are listed at the end of this document. If you're running on 
-Git Bash (or other Windows flavors of the command line), you can use the option `-h` or 
+`man find` tells you all about the ways you can use `find`. There are also many helpful
+resources, some of which are listed at the end of this document. If you're running on
+Git Bash (or other Windows flavors of the command line), you can use the option `-h` or
 `--help` on many commands to display similar instructions or explanation.
 
 The rest of this reference document will cover two main actions:
@@ -46,7 +46,7 @@ The rest of this reference document will cover two main actions:
 1. Combining & Refining - how to combine commands and to refine your requests with filters or matching patterns
 1. Inspection - how to learn more about files, look for specific kinds of files, or look at the contents of files
 
-## Navigation 
+## Navigation
 
 This section covers commands that help you to find your way, move around, and to look at the contents of a location in the file system.
 
@@ -62,9 +62,9 @@ This section covers commands that help you to find your way, move around, and to
 * viewing/opening files (Unix: open / DOS: <type the file>; OR viewers like less(Unix)/more(Win); OR editors: vi, nano, ted and notepad)
 * copying/moving files (Mac: `cp` / `mv` / Windows: copy con/move)
 
-## Combining and Refining 
+## Combining and Refining
 
-This section includes information on how to combine commands, to refine your requests, and create 
+This section includes information on how to combine commands, to refine your requests, and create
 filters that matching patterns to look for specific types of information, like certain types of files
 
 ### Create File Lists
@@ -81,9 +81,9 @@ filters that matching patterns to look for specific types of information, like c
 
 ### Filters
 
-The UNIX command line offers ways for us to filter data. For example, 
-what if you want to look for all of the files that are in JPEG format? 
-For this task, you can use file expansion wildcards. These are special 
+The UNIX command line offers ways for us to filter data. For example,
+what if you want to look for all of the files that are in JPEG format?
+For this task, you can use file expansion wildcards. These are special
 characters that the command line can use to filter results based on specific patterns.
 
 Here are two useful ones that we can use in file filtering:
@@ -91,13 +91,14 @@ Here are two useful ones that we can use in file filtering:
 * `*` the asterisk character can be used to indicate a series of many characters. For example, the string `*.jpg` would look for any string with `.jpg` in it, but it may be preceded by any number of characters. This could be useful for looking for all of the JPEG files.
 * `?` the question mark can be used to stand in for one or zero single characters. For example, if you want to look for `.jpeg` or `.jpg`, you could use the question mark to filter like `.jp?g`, which would match both the 3-letter and 4-letter patterns.
 
-Note: this is generally a type of pattern matching, which is a larger topic. 
+Note: this is an example of a pattern matching technique.
+There are a number of different ways that you can match or filter these patterns, which is a larger topic.
 If you're interested in more advanced pattern matching, then regular expressions (discussed below)
-are of more interest to you.  
+will be of interest to you.  
 
 ### Combining Commands, or Piping Data
 
-You can use the `|` and the `<` and `>` to move data between the commands. This stringing together, or "piping" 
+You can use the `|` and the `<` and `>` to move data between the commands. This stringing together, or "piping"
 data in between operations is useful since each command does about one thing. The pipe moves the data out to the next command, while the brackets access from or write to a file.
 
 For example, you could use the `wc` command to count the lines in a file, pipe it to the `sort` command
@@ -105,7 +106,7 @@ to order by number, then use the `head -n 1` command to display the first line, 
 
 ## Inspecting Files
 
-This section explores ways to look around the file system in more detailed ways, search for files 
+This section explores ways to look around the file system in more detailed ways, search for files
 based on specific criteria, and to filter information from outputs and files
 
 ### Finding files
@@ -134,26 +135,26 @@ in the name of the object.
 
 In the lab activity, you are asked to describe what the output of this command would be.
 
-Find can also be adapted to search for patterns using regular expressions. For example: 
+Find can also be adapted to search for patterns using regular expressions. For example:
 
 * `find -E . -type f -regex ".*\.tiff?"`
 
-In the above, the option `-E` indicates that the regular expression will use advanced operators 
+In the above, the option `-E` indicates that the regular expression will use advanced operators
 (in this case, the question mark).
-Then it is similar to the above, it looks for objects that are files. 
+Then it is similar to the above, it looks for objects that are files.
 Finally, `-regex` indicates regular expression, followed by the expression in double quotes.
 In this example, the expression looks for matches that are strings with any number of any characters (`.*`),
 have a dot (`\.`), have a string of tif (`tif`), and then have zero or one instances of the 
 character f (`f?`). In plain language, this expression will look in the current directory, 
 search all of the files, and return matches for files ending with `.tif` or `.tiff`, which
-are both likely possible extensions for a tif file. 
-
-_[TODO - GREP, FILE, MD5]_
+are both likely possible extensions for a tif file.
 
 ### Other useful commands for working with text data
 
-* `sed` - the "stream editor" command allows you to efficiently remove text by line, filter particular characters using regular expressions, etc. 
-* `tr` - the "translate" allows for use of regular expressions and the conversion, or easy removal, of particular character strings; can be useful for removing punctuation, converting upper to lower case, etc. 
+* `grep` - the "global regular expression patterns", a useful matching tool that can help you to find patterns within files (not just file names)
+* `file` - a file characterization tool that can help you to determine a file's MIME type
+* `sed` - the "stream editor" command allows you to efficiently remove text by line, filter particular characters using regular expressions, etc.
+* `tr` - the "translate" allows for use of regular expressions and the conversion, or easy removal, of particular character strings; can be useful for removing punctuation, converting upper to lower case, etc.
 * `awk` - useful for pulling information from files with data in standard formats on each line, among other things (for example, fixed-width data, or csvs); more complicated and expansive than `cut`.
 
 ### Other commands useful for inspecting files and the operating system
@@ -184,7 +185,7 @@ _[TODO - GREP, FILE, MD5]_
 1. In what sorts of situations do you think that the command line interface would be useful or advantageous over the GUI? Give at least one example.
 1. Do you feel more comfortable using the command line? Why or why not?
 
-1. BONUS: Are there any `.jpeg` files? How many? Are these "the same" kind of files as `.jpg`? How can you look for both kinds? 
+1. BONUS: Are there any `.jpeg` files? How many? Are these "the same" kind of files as `.jpg`? How can you look for both kinds?
 
 ### Credits and Additional Resources
 
