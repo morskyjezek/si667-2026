@@ -174,18 +174,7 @@ are both likely possible extensions for a tif file.
 
 ## Lab 2 Activities
 
-**Answer these questions for January 23:**
-
-1. Imagine that you have opened a window that gives access to the command line. What command would you use to determine your current location (current path address)?
-1. What command would you use to move to another directory or folder?
-1. What command would you use to list the contents of the directory or folder?
-1. You can request a basic list (names of files and directories) and an advanced list (that shows permissions, file size, path, etc)? What command and options would you use to generate the basic list? What commands and options generate the advanced list?
-1. What are the `.` and `..` directories?
-1. Use the `ls` command with a filter (`*`) to determine how many `.jpg` files are in the top directory of this repository. What is the command? How many `.jpg` files are there? 
-1. In what sorts of situations do you think that the command line interface would be useful or advantageous over the GUI? Give at least one example.
-1. Do you feel more comfortable using the command line? Why or why not?
-
-1. BONUS: Are there any `.jpeg` files? How many? Are these "the same" kind of files as `.jpg`? How can you look for both kinds?
+**[Refer to the questions as listed in the Canvas Assignment](https://umich.instructure.com/courses/812017/assignments/2929736)**
 
 ### Credits and Additional Resources
 
